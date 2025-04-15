@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefenceCracker - CDS & CAPF Exam Preparation Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .section-heading {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #4b6cb7;
+        }
+        
+        .forum-card {
+            transition: all 0.3s ease;
+        }
+        
+        .forum-card:hover {
+            background-color: #f9fafb;
+        }
+        
+        /* Custom tab styles */
+        .tab-active {
+            border-bottom: 3px solid #4b6cb7;
+            color: #4b6cb7;
+            font-weight: 600;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* Progress indicator styles */
+        .progress-indicator {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background-color: #e5e7eb;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold gradient-bg text-white p-2 rounded-lg mr-2">
+                    <i class="fas fa-shield-alt"></i> DC
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">DefenceCracker</h1>
+                    <p class="text-xs text-gray-500">CDS & CAPF Preparation Portal</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#notes" class="text-gray-700 hover:text-blue-600 font-medium">Study Material</a>
+                <a href="#forum" class="text-gray-700 hover:text-blue-600 font-medium">Discussion Forum</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About Exams</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-user-plus mr-2"></i> Sign Up
+                </button>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 lg:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-6">Ace Your CDS & CAPF Exams with Confidence</h1>
+                    <p class="text-lg mb-8 opacity-90">Your one-stop destination for comprehensive preparation materials, expert guidance, and a supportive community to help you conquer the defence exams.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-blue-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                            <i class="fas fa-book-open mr-2"></i> Explore Resources
+                        </button>
+                        <button class="border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-800 transition duration-300">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="bg-white p-4 rounded-lg shadow-2xl max-w-md">
+                            <div class="bg-gray-100 rounded-lg p-6">
+                                <h3 class="text-gray-800 font-bold text-xl mb-4">Exam Calendar</h3>
+                                <div class="space-y-4">
+                                    <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <h4 class="font-semibold text-gray-800">CDS I 2025</h4>
+                                                <p class="text-sm text-gray-600">April 6, 2025</p>
+                                            </div>
+                                            <div class="bg-blue-100 text-blue-800 text-xs font-medium py-1 px-2 rounded">
+                                                Upcoming
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <h4 class="font-semibold text-gray-800">CAPF 2025</h4>
+                                                <p class="text-sm text-gray-600">August 3, 2025</p>
+                                            </div>
+                                            <div class="bg-green-100 text-green-800 text-xs font-medium py-1 px-2 rounded">
+                                                Registration Open
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <h4 class="font-semibold text-gray-800">CDS II 2025</h4>
+                                                <p class="text-sm text-gray-600">November 8, 2025</p>
+                                            </div>
+                                            <div class="bg-gray-100 text-gray-800 text-xs font-medium py-1 px-2 rounded">
+                                                Coming Soon
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-bolt text-yellow-300"></i>
+                                <span class="font-bold">15,000+</span>
+                            </div>
+                            <p class="text-xs">Students Succeeded</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About the Exams Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Understanding Defence Exams</h2>
+            
+            <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
+                <div class="lg:w-1/2 bg-blue-50 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-3 rounded-full mr-4">
+                            <i class="fas fa-medal text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Combined Defence Services (CDS)</h3>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <p>The Combined Defence Services (CDS) examination is conducted by the Union Public Service Commission (UPSC) twice a year for recruitment into the Indian Military Academy, Indian Naval Academy, Air Force Academy, and Officers Training Academy.</p>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-gray-800 mb-2">Exam Pattern</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>English (100 marks)</li>
+                                <li>General Knowledge (100 marks)</li>
+                                <li>Elementary Mathematics (100 marks) - Except for OTA</li>
+                                <li>2-hour duration for each paper</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-gray-800 mb-2">Eligibility</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Age: 19-24 years (IMA, INA, AFA); 19-25 years (OTA)</li>
+                                <li>Educational Qualification: Bachelor's degree for IMA, INA, AFA; Bachelor's degree for OTA</li>
+                                <li>Both men and women can apply for OTA; only men for IMA, INA, AFA</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        <i class="fas fa-info-circle mr-2"></i> Detailed CDS Information
+                    </button>
+                </div>
+                
+                <div class="lg:w-1/2 bg-blue-50 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="gradient-bg p-3 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Central Armed Police Forces (CAPF)</h3>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <p>The CAPF Assistant Commandant examination is conducted by UPSC annually for recruitment to the post of Assistant Commandant in forces like BSF, CRPF, ITBP, SSB, and CISF.</p>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-gray-800 mb-2">Exam Pattern</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Paper I: General Ability and Intelligence (250 marks)</li>
+                                <li>Paper II: General Studies, Essay & Comprehension (200 marks)</li>
+                                <li>Physical Efficiency Test and Medical Standards Test</li>
+                                <li>Interview/Personality Test</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-gray-800 mb-2">Eligibility</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Age: 20-25 years</li>
+                                <li>Educational Qualification: Bachelor's degree in any discipline</li>
+                                <li>Physical and Medical standards as prescribed</li>
+                                <li>Both men and women can apply</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        <i class="fas fa-info-circle mr-2"></i> Detailed CAPF Information
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Study Materials Section -->
+    <section id="notes" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-center">Comprehensive Study Resources</h2>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Access high-quality study materials created by defence experts to help you master every topic in the CDS and CAPF exam syllabus.</p>
+            
+            <!-- Tabs -->
+            <div class="flex flex-wrap justify-center mb-8">
+                <button id="all-tab" class="tab-active px-5 py-3 focus:outline-none">All Resources</button>
+                <button id="cds-tab" class="px-5 py-3 focus:outline-none">CDS Specific</button>
+                <button id="capf-tab" class="px-5 py-3 focus:outline-none">CAPF Specific</button>
+            </div>
+            
+            <!-- Content Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Notes Card -->
+                <div class="content-card card-hover bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-sticky-note text-blue-600 text-6xl"></i>
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Notes</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Comprehensive Notes Collection</h3>
+                        <p class="text-gray-600 mb-4">Well-structured notes covering all subjects for both CDS and CAPF exams, with highlights of important points.</p>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-gray-500">250+ resources</span>
+                            <span class="flex items-center text-sm text-yellow-600">
+                                <i class="fas fa-star mr-1"></i> 4.8
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">English</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Mathematics</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">GK</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Strategy</div>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded transition duration-300">
+                            View Notes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Videos Card -->
+                <div class="content-card card-hover bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-red-600 text-6xl"></i>
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Videos</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Expert Video Lessons</h3>
+                        <p class="text-gray-600 mb-4">HD quality video lessons from defence experts explaining complex topics in simple language.</p>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-gray-500">180+ videos</span>
+                            <span class="flex items-center text-sm text-yellow-600">
+                                <i class="fas fa-star mr-1"></i> 4.9
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Lectures</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Shortcuts</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Case Studies</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">MCQ Solving</div>
+                        </div>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 rounded transition duration-300">
+                            Watch Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mind Maps Card -->
+                <div class="content-card card-hover bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-project-diagram text-purple-600 text-6xl"></i>
+                        <div class="absolute top-3 right-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Mind Maps</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Visual Mind Maps</h3>
+                        <p class="text-gray-600 mb-4">Colorful, comprehensive mind maps to help you visualize and connect important concepts quickly.</p>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-gray-500">120+ mind maps</span>
+                            <span class="flex items-center text-sm text-yellow-600">
+                                <i class="fas fa-star mr-1"></i> 4.7
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">History</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Geography</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Polity</div>
+                            <div class="bg-gray-100 py-1 px-2 rounded text-xs text-gray-700">Economics</div>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 rounded transition duration-300">
+                            View Mind Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold gradient-bg text-white p-2 rounded-lg mr-2">
+                            <i class="fas fa-shield-alt"></i> DC
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">DefenceCracker</h3>
+                            <p class="text-xs text-gray-400">CDS & CAPF Preparation Portal</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner for defence exam preparation. We help aspirants achieve their dreams of serving the nation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Courses</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Success Stories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Exam Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">CDS Study Material</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">CAPF Study Material</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Previous Year Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mock Tests</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Interview Preparation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">123 Defence Colony, New Delhi, India - 110024</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">info@defencecracker.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h5 class="text-sm font-semibold mb-2">Subscribe to our newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DefenceCracker. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('#all-tab, #cds-tab, #capf-tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('tab-active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('tab-active');
+                    
+                    // Here you would normally filter content based on the selected tab
+                    // For this demo, we're just changing the tab appearance
+                });
+            });
+            
+            // Mobile menu toggle functionality could be added here
+        });
+    </script>
+</body>
+</html>
