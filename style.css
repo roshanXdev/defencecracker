@@ -1360,4 +1360,52 @@ button.btn:hover {
 
 .view-more-btn:hover {
   background-color: #1e3a8a;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden; /* Hide everything by default */
+  }
+
+  .study-plan-result,
+  .study-plan-result * {
+    visibility: visible; /* Make the study plan result and its children visible */
+  }
+
+  .study-plan-result {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    border: none;
+    background-color: white; /* Ensure white background for print */
+    color: black; /* Ensure black text for print */
+  }
+
+  /* Hide the print button itself */
+  #printPlanBtn {
+    display: none;
+  }
+
+  /* Optional: Adjust styles within the plan for better printing */
+  .study-plan-result h3, 
+  .week-block h4 {
+    color: black !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  .resource-tag {
+    background-color: #eee !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: black !important;
+  }
 } 

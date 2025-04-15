@@ -180,12 +180,22 @@ document.addEventListener('DOMContentLoaded', function() {
         planHTML += `
         </div>
         <p><strong>Note:</strong> This is a sample of your first ${Math.min(totalWeeks, 4)} weeks. The complete ${totalWeeks}-week plan is available in your dashboard.</p>
+        <button id="printPlanBtn" class="btn btn-secondary" style="margin-top: 20px;">Print/Save Plan as PDF</button>
         `;
         
         // Display the result
         if (studyPlanResult) { // Check if element exists
             studyPlanResult.innerHTML = planHTML;
             studyPlanResult.style.display = 'block';
+
+            // Add event listener to the new print button
+            const printBtn = document.getElementById('printPlanBtn');
+            if (printBtn) {
+                printBtn.addEventListener('click', () => {
+                    window.print();
+                });
+            }
+            
             // Scroll to the result
             studyPlanResult.scrollIntoView({ behavior: 'smooth' });
         }
