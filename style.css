@@ -4,6 +4,8 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .gradient-bg {
@@ -745,4 +747,145 @@ background-color: rgba(255, 255, 255, 0.1);
 .section-header p {
     font-size: 16px;
 }
+}
+
+/* Fixes for new sections */
+/* Global fixes for website width */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fix for Personalized Study Plans section */
+.study-plans-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.study-plan-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.study-plan-card h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.study-plan-card p {
+  color: #5a6268;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Fix for Active Discussion Forum */
+.discussion-forum-section {
+  margin: 40px 0;
+}
+
+.discussion-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.discussion-topic {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 300px;
+}
+
+.discussion-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.discussion-meta span {
+  font-size: 14px;
+  color: #6c757d;
+  margin-right: 15px;
+}
+
+/* Success Stories Section */
+.success-stories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.success-story {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 30px);
+  min-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.success-story:hover {
+  transform: translateY(-5px);
+}
+
+.success-story-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.success-story-content {
+  padding: 20px;
+}
+
+.success-rank {
+  display: inline-block;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.success-story h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.success-story p {
+  color: #5a6268;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.success-story a {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.success-story a:hover {
+  text-decoration: underline;
 } 
