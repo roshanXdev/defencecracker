@@ -252,6 +252,8 @@ box-shadow: var(--card-shadow);
 overflow: hidden;
 width: 350px;
 transition: var(--transition);
+display: flex;
+flex-direction: column;
 }
 
 .plan-card:hover {
@@ -300,10 +302,14 @@ font-size: 14px;
 
 .plan-content {
 padding: 24px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
 }
 
 .plan-features {
 margin-bottom: 24px;
+flex-grow: 1;
 }
 
 .feature {
