@@ -888,4 +888,476 @@ body {
 
 .success-story a:hover {
   text-decoration: underline;
+}
+
+/* CSS for Personalized Study Plans */
+.study-plans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.study-plan-form {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 8px;
+}
+
+button.btn {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 30px auto 0;
+}
+
+button.btn:hover {
+  background-color: #1e3a8a;
+}
+
+.study-plan-result {
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.study-plan-result h3 {
+  color: #1e40af;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.weekly-plan {
+  margin-top: 20px;
+}
+
+.week-block {
+  background-color: #f8fafc;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.week-block h4 {
+  color: #1e40af;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.day-plan {
+  margin-bottom: 15px;
+}
+
+.day-plan h5 {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.day-plan ul {
+  margin-left: 20px;
+}
+
+.day-plan li {
+  margin-bottom: 5px;
+}
+
+.resources-section {
+  margin-top: 25px;
+}
+
+.resources-section h5 {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resource-tag {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CSS for Discussion Forum */
+.forum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.forum-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.category-tab {
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab.active, 
+.category-tab:hover {
+  background-color: #1e40af;
+  color: white;
+}
+
+.forum-search {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.forum-search input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+}
+
+.forum-search button {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.forum-discussions {
+  margin-bottom: 30px;
+}
+
+.discussion-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+}
+
+.discussion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.discussion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discussion-content {
+  flex: 1;
+}
+
+.discussion-category {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.discussion-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.discussion-excerpt {
+  color: #4b5563;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.discussion-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.discussion-author {
+  font-weight: 500;
+}
+
+.discussion-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forum-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-btn {
+  background-color: #f1f5f9;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.3s;
+}
+
+.pagination-btn:hover:not([disabled]) {
+  background-color: #1e40af;
+  color: white;
+}
+
+.pagination-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .forum-categories {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+  }
+  
+  .category-tab {
+    white-space: nowrap;
+  }
+  
+  .discussion-card {
+    flex-direction: column;
+  }
+  
+  .discussion-avatar {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+/* CSS for Success Stories with proper person images */
+.success-stories {
+  padding: 60px 0;
+  background-color: #f8fafc;
+}
+
+.success-stories .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.success-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.success-story-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.success-story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+  height: 260px;
+  width: 100%; /* Add width for consistency */
+  object-fit: cover; /* Ensure image covers the area */
+  display: block; /* Remove potential extra space below image */
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Ensure img tag behaves as block */
+}
+
+.rank-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #1e40af;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.story-exam {
+  padding: 20px 20px 0;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.story-name {
+  padding: 5px 20px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.story-quote {
+  padding: 0 20px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  display: block;
+  padding: 0 20px 20px;
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-more-btn {
+  background-color: #1e40af;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+  background-color: #1e3a8a;
 } 

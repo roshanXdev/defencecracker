@@ -365,116 +365,139 @@
       </div>
     </div>
 
-    <!-- HTML for Personalized Study Plans Section -->
-    <section class="container">
-      <h2>Personalized Study Plans</h2>
-      <p>Customized learning paths designed to maximize your performance based on your strengths, weaknesses, and available study time.</p>
-      
-      <div class="study-plans-section">
-        <div class="study-plan-card">
-          <h4>Weekly Subject Distribution</h4>
-          <p>Balanced weekly schedule covering all subjects with emphasis on your weaker areas to ensure comprehensive preparation.</p>
+    <!-- HTML for Personalized Study Plans page -->
+    <section class="study-plans-container">
+      <div class="container">
+        <h2 class="section-title">Personalized Study Plans</h2>
+        <p class="section-description">Create a customized study plan based on your exam choice, available time, and strengths.</p>
+        
+        <div class="study-plan-form">
+          <form id="studyPlanForm">
+            <div class="form-group">
+              <label for="examType">Select Exam</label>
+              <select id="examType" required>
+                <option value="">Choose your exam</option>
+                <option value="cds">CDS</option>
+                <option value="capf">CAPF</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="preparationTime">Available Preparation Time</label>
+              <select id="preparationTime" required>
+                <option value="">Select duration</option>
+                <option value="1">1 month</option>
+                <option value="2">2 months</option>
+                <option value="3">3 months</option>
+                <option value="4">4 months</option>
+                <option value="6">6 months</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Your Strengths</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="strengths" value="english"> English</label>
+                <label><input type="checkbox" name="strengths" value="mathematics"> Mathematics</label>
+                <label><input type="checkbox" name="strengths" value="gk"> General Knowledge</label>
+                <label><input type="checkbox" name="strengths" value="reasoning"> Reasoning</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Areas to Improve</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="improvements" value="english"> English</label>
+                <label><input type="checkbox" name="improvements" value="mathematics"> Mathematics</label>
+                <label><input type="checkbox" name="improvements" value="gk"> General Knowledge</label>
+                <label><input type="checkbox" name="improvements" value="reasoning"> Reasoning</label>
+              </div>
+            </div>
+            
+            <button type="submit" id="generatePlanBtn" class="btn btn-primary">Generate Study Plan</button>
+          </form>
         </div>
         
-        <div class="study-plan-card">
-          <h4>Progressive Difficulty Levels</h4>
-          <p>Gradually increasing complexity of study materials and practice questions to build confidence and capability.</p>
-        </div>
-        
-        <div class="study-plan-card">
-          <h4>SSB Interview Preparation</h4>
-          <p>Specialized preparation modules for the Services Selection Board interview process with mock interviews and feedback.</p>
-        </div>
-        
-        <div class="study-plan-card">
-          <h4>Essay & Comprehension Focus</h4>
-          <p>Targeted practice for essay writing and comprehension skills essential for CAPF Paper II success.</p>
-        </div>
-        
-        <div class="study-plan-card">
-          <h4>Tailored to Your Strengths</h4>
-          <p>Study plans that leverage your academic background and existing knowledge to accelerate your preparation.</p>
-        </div>
-        
-        <div class="study-plan-card">
-          <h4>Regular Progress Tracking</h4>
-          <p>Built-in assessment tools to monitor your improvement and adjust the study plan accordingly for optimal results.</p>
+        <div id="studyPlanResult" class="study-plan-result">
+          <!-- Study plan will be inserted here by JavaScript -->
         </div>
       </div>
     </section>
 
-    <!-- HTML for Active Discussion Forum Section -->
-    <section class="container">
-      <h2>Active Discussion Forum</h2>
-      <p>Connect with fellow aspirants and defence experts to clarify doubts, share resources, and stay motivated throughout your preparation journey.</p>
-      
-      <div class="discussion-topics">
-        <div class="discussion-topic">
-          <div class="discussion-meta">
-            <span><strong>Hot Topic</strong></span>
-            <span>856 views</span>
-            <span>Updated 2 hours ago</span>
-          </div>
-          <h3>Best Strategy for CDS Mathematics in 60 Days</h3>
-          <p>I've been struggling with the Maths section and need a focused strategy for the upcoming CDS exam. Has anyone prepared for Maths in 2 months and succeeded?</p>
+    <!-- HTML for Discussion Forum -->
+    <section class="forum-container">
+      <div class="container">
+        <h2 class="section-title">Active Discussion Forum</h2>
+        <p class="section-description">Join thousands of aspirants discussing exam strategies, doubt clearing, and success stories.</p>
+        
+        <div class="forum-categories">
+          <div class="category-tab active" data-category="all">All Topics</div>
+          <div class="category-tab" data-category="cds">CDS Preparation</div>
+          <div class="category-tab" data-category="capf">CAPF Preparation</div>
+          <div class="category-tab" data-category="study">Study Materials</div>
+          <div class="category-tab" data-category="success">Success Stories</div>
         </div>
         
-        <div class="discussion-topic">
-          <div class="discussion-meta">
-            <span><strong>CAPF Preparation</strong></span>
-            <span>621 views</span>
-            <span>Updated yesterday</span>
-          </div>
-          <h3>Essay Writing Tips for CAPF Paper II</h3>
-          <p>Looking for structured approach to essay writing for Paper II. Any recommendations on practice and improvement techniques?</p>
+        <div class="forum-search">
+          <input type="text" id="forumSearch" placeholder="Search discussions...">
+          <button id="searchBtn"><i class="fas fa-search"></i></button>
         </div>
         
-        <div class="discussion-topic">
-          <div class="discussion-meta">
-            <span><strong>Study Materials</strong></span>
-            <span>742 views</span>
-            <span>Updated 3 days ago</span>
-          </div>
-          <h3>Recommended Books for CDS General Knowledge</h3>
-          <p>Can anyone suggest the most effective books for GK preparation? Especially focusing on History and Geography sections.</p>
+        <div class="forum-discussions">
+          <!-- Discussion threads will be populated here -->
+        </div>
+        
+        <div class="forum-pagination">
+          <button class="pagination-btn" id="prevPage" disabled>&laquo; Previous</button>
+          <span class="page-indicator">Page <span id="currentPage">1</span> of <span id="totalPages">5</span></span>
+          <button class="pagination-btn" id="nextPage">Next &raquo;</button>
         </div>
       </div>
     </section>
 
-    <!-- HTML for Success Stories Section with proper images -->
-    <section class="container">
-      <h2>Success Stories</h2>
-      <p>Learn from candidates who cracked defence exams with the help of DefenceCracker resources and community support.</p>
-      
-      <div class="success-stories">
-        <div class="success-story">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lt. Vikram Singh" class="success-story-image">
-          <div class="success-story-content">
-            <span class="success-rank"><i class="fas fa-medal mr-2"></i>AIR 23 CDS II 2023</span>
-            <h3>Lt. Vikram Singh</h3>
-            <p>"The structured notes and mock tests on DefenceCracker were instrumental in my success. I followed the 4-month study plan religiously and it paid off!"</p>
-            <a href="#">Read Full Story</a>
+    <!-- HTML for Success Stories section with proper images -->
+    <section class="success-stories">
+      <div class="container">
+        <h2 class="section-title">Success Stories</h2>
+        <p class="section-description">Learn from candidates who cracked the defence exams with our resources</p>
+        
+        <div class="success-stories-grid">
+          <div class="success-story-card">
+            <div class="story-image">
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Lt. Vikram Singh">
+            </div>
+            <div class="rank-badge">AIR 23</div>
+            <div class="story-exam">CDS II 2023</div>
+            <h3 class="story-name">Lt. Vikram Singh</h3>
+            <p class="story-quote">"The structured notes and mock tests on DefenceCracker were instrumental in my success. I followed the 4-month study plan religiously and it paid off!"</p>
+            <a href="#" class="read-more">Read Full Story</a>
+          </div>
+          
+          <div class="success-story-card">
+            <div class="story-image">
+              <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="AC Priya Sharma">
+            </div>
+            <div class="rank-badge">AIR 45</div>
+            <div class="story-exam">CAPF 2024</div>
+            <h3 class="story-name">AC Priya Sharma</h3>
+            <p class="story-quote">"The CAPF-specific resources and active community support helped me tackle the toughest parts of the exam. The discussion forum cleared many of my doubts."</p>
+            <a href="#" class="read-more">Read Full Story</a>
+          </div>
+          
+          <div class="success-story-card">
+            <div class="story-image">
+              <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Lt. Arjun Reddy">
+            </div>
+            <div class="rank-badge">AIR 78</div>
+            <div class="story-exam">CDS I 2024</div>
+            <h3 class="story-name">Lt. Arjun Reddy</h3>
+            <p class="story-quote">"The mind maps and video explanations simplified complex topics. I improved my Mathematics score by 35 points in just two months of preparation."</p>
+            <a href="#" class="read-more">Read Full Story</a>
           </div>
         </div>
         
-        <div class="success-story">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="AC Priya Sharma" class="success-story-image">
-          <div class="success-story-content">
-            <span class="success-rank"><i class="fas fa-medal mr-2"></i>AIR 45 CAPF 2024</span>
-            <h3>AC Priya Sharma</h3>
-            <p>"The CAPF-specific resources and active community support helped me tackle the toughest parts of the exam. The discussion forum cleared many of my doubts."</p>
-            <a href="#">Read Full Story</a>
-          </div>
-        </div>
-        
-        <div class="success-story">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lt. Arjun Reddy" class="success-story-image">
-          <div class="success-story-content">
-            <span class="success-rank"><i class="fas fa-medal mr-2"></i>AIR 78 CDS I 2024</span>
-            <h3>Lt. Arjun Reddy</h3>
-            <p>"The mind maps and video explanations simplified complex topics. I improved my Mathematics score by 35 points in just two months of preparation."</p>
-            <a href="#">Read Full Story</a>
-          </div>
+        <div class="view-more-container">
+          <a href="#" class="view-more-btn">View More Success Stories</a>
         </div>
       </div>
     </section>
