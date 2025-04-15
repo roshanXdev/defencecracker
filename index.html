@@ -6,93 +6,7 @@
     <title>DefenceCracker - CDS & CAPF Exam Preparation Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .content-card {
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .section-heading {
-            position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        
-        .section-heading:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: #4b6cb7;
-        }
-        
-        .forum-card {
-            transition: all 0.3s ease;
-        }
-        
-        .forum-card:hover {
-            background-color: #f9fafb;
-        }
-        
-        /* Custom tab styles */
-        .tab-active {
-            border-bottom: 3px solid #4b6cb7;
-            color: #4b6cb7;
-            font-weight: 600;
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        
-        /* Progress indicator styles */
-        .progress-indicator {
-            width: 100%;
-            height: 6px;
-            border-radius: 3px;
-            background-color: #e5e7eb;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50">
     <!-- Header Section -->
@@ -378,6 +292,345 @@
         </div>
     </section>
 
+    <!-- Additional Resource Categories for Comprehensive Study Resources Section -->
+    <div class="resource-row">
+      <!-- Document Repository -->
+      <div class="resource-card">
+        <div class="resource-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#4169E1" viewBox="0 0 16 16">
+            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707L9.293 0zM9 1v3h3v12H4V1h5z"/>
+            <path d="M4.5 6.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </div>
+        <div class="document-badge">Documents</div>
+        <h3>Essential Document Library</h3>
+        <p>Comprehensive collection of PDFs, study guides, and reference materials covering the entire CDS and CAPF syllabus.</p>
+        <div class="resource-meta">
+          <span>85+ documents</span>
+          <span class="rating">★ 4.6</span>
+        </div>
+        <div class="resource-tags">
+          <span>Syllabi</span>
+          <span>Previous Papers</span>
+          <span>Study Guides</span>
+        </div>
+        <button class="view-button">Access Documents</button>
+      </div>
+
+      <!-- Practice Tests -->
+      <div class="resource-card">
+        <div class="resource-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#FF5722" viewBox="0 0 16 16">
+            <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+          </svg>
+        </div>
+        <div class="tests-badge">Tests</div>
+        <h3>Practice Tests & Mock Exams</h3>
+        <p>Subject-wise practice tests and full-length mock exams with detailed explanations and performance analytics.</p>
+        <div class="resource-meta">
+          <span>150+ tests</span>
+          <span class="rating">★ 4.8</span>
+        </div>
+        <div class="resource-tags">
+          <span>Subject Tests</span>
+          <span>Full Mocks</span>
+          <span>Analysis</span>
+        </div>
+        <button class="view-button">Take Tests</button>
+      </div>
+
+      <!-- Important URLs -->
+      <div class="resource-card">
+        <div class="resource-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#673AB7" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+          </svg>
+        </div>
+        <div class="urls-badge">URLs</div>
+        <h3>Curated External Resources</h3>
+        <p>Hand-picked collection of valuable websites, official portals, and online resources for comprehensive exam preparation.</p>
+        <div class="resource-meta">
+          <span>70+ resources</span>
+          <span class="rating">★ 4.5</span>
+        </div>
+        <div class="resource-tags">
+          <span>Official Sites</span>
+          <span>Research</span>
+          <span>News</span>
+        </div>
+        <button class="view-button">Explore Links</button>
+      </div>
+    </div>
+
+    <!-- Study Plan & Strategy Section -->
+    <section class="study-plan-section">
+      <div class="section-header">
+        <h2>Personalized Study Plans</h2>
+        <p>Structured roadmaps to guide your preparation journey from start to success.</p>
+      </div>
+
+      <div class="plans-container">
+        <div class="plan-card">
+          <div class="plan-header cds-header">
+            <h3>CDS Preparation Roadmap</h3>
+            <span class="duration">3-6 Months</span>
+          </div>
+          <div class="plan-content">
+            <div class="plan-features">
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Weekly subject distribution</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Progressive difficulty levels</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>SSB interview preparation</span>
+              </div>
+            </div>
+            <button class="plan-button">View Plan</button>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header capf-header">
+            <h3>CAPF AC Roadmap</h3>
+            <span class="duration">4-8 Months</span>
+          </div>
+          <div class="plan-content">
+            <div class="plan-features">
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Phase-wise preparation</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Physical fitness routine</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Essay & comprehension focus</span>
+              </div>
+            </div>
+            <button class="plan-button">View Plan</button>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header custom-header">
+            <h3>Customized Study Plan</h3>
+            <span class="badge">Personalized</span>
+          </div>
+          <div class="plan-content">
+            <div class="plan-features">
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Tailored to your strengths</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Adaptive schedule</span>
+              </div>
+              <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Regular progress tracking</span>
+              </div>
+            </div>
+            <button class="plan-button premium-button">Create Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discussion Forum Preview Section -->
+    <section class="forum-preview-section">
+      <div class="section-header">
+        <h2>Active Discussion Forum</h2>
+        <p>Join the community to discuss exam strategies, clear doubts, and share resources.</p>
+        <a href="#" class="view-all-link">View All Discussions →</a>
+      </div>
+
+      <div class="forum-container">
+        <div class="forum-card hot-topic">
+          <div class="forum-tag">Hot Topic</div>
+          <h3>Best Strategy for CDS Mathematics in 60 Days</h3>
+          <div class="forum-meta">
+            <span class="replies">42 replies</span>
+            <span class="views">856 views</span>
+            <span class="last-post">Updated 2 hours ago</span>
+          </div>
+          <p class="forum-excerpt">I've been struggling with the Maths section and need a focused strategy for the upcoming CDS exam. Has anyone prepared for Maths in 2 months and succeeded?</p>
+          <div class="forum-footer">
+            <div class="user-info">
+              <div class="user-avatar">RM</div>
+              <span class="username">RajeshM</span>
+            </div>
+            <button class="join-discussion">Join Discussion</button>
+          </div>
+        </div>
+
+        <div class="forum-card">
+          <div class="forum-tag">CAPF Preparation</div>
+          <h3>Essay Writing Tips for CAPF Paper II</h3>
+          <div class="forum-meta">
+            <span class="replies">29 replies</span>
+            <span class="views">621 views</span>
+            <span class="last-post">Updated yesterday</span>
+          </div>
+          <p class="forum-excerpt">Looking for structured approach to essay writing for Paper II. Any recommendations on practice and improvement techniques?</p>
+          <div class="forum-footer">
+            <div class="user-info">
+              <div class="user-avatar">AK</div>
+              <span class="username">AnupriyaK</span>
+            </div>
+            <button class="join-discussion">Join Discussion</button>
+          </div>
+        </div>
+
+        <div class="forum-card">
+          <div class="forum-tag">Study Materials</div>
+          <h3>Recommended Books for CDS General Knowledge</h3>
+          <div class="forum-meta">
+            <span class="replies">35 replies</span>
+            <span class="views">742 views</span>
+            <span class="last-post">Updated 3 days ago</span>
+          </div>
+          <p class="forum-excerpt">Can anyone suggest the most effective books for GK preparation? Especially focusing on History and Geography sections.</p>
+          <div class="forum-footer">
+            <div class="user-info">
+              <div class="user-avatar">VP</div>
+              <span class="username">VikasPatel</span>
+            </div>
+            <button class="join-discussion">Join Discussion</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories-section">
+      <div class="section-header">
+        <h2>Success Stories</h2>
+        <p>Learn from those who've accomplished their goals with DefenceCracker.</p>
+      </div>
+
+      <div class="stories-carousel">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1555095606-fecd0b301a01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Success Story" />
+            <div class="achievement-badge">
+              <span>AIR 23</span>
+              <span>CDS II 2023</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h3>Lt. Vikram Singh</h3>
+            <p>"The structured notes and mock tests on DefenceCracker were instrumental in my success. I followed the 4-month study plan religiously and it paid off!"</p>
+            <a href="#" class="read-more">Read Full Story →</a>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1614947746254-4cb7284a6be0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Success Story" />
+            <div class="achievement-badge">
+              <span>AIR 45</span>
+              <span>CAPF 2024</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h3>AC Priya Sharma</h3>
+            <p>"The CAPF-specific resources and active community support helped me tackle the toughest parts of the exam. The discussion forum cleared many of my doubts."</p>
+            <a href="#" class="read-more">Read Full Story →</a>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Success Story" />
+            <div class="achievement-badge">
+              <span>AIR 78</span>
+              <span>CDS I 2024</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h3>Lt. Arjun Reddy</h3>
+            <p>"The mind maps and video explanations simplified complex topics. I improved my Mathematics score by 35 points in just two months of preparation."</p>
+            <a href="#" class="read-more">Read Full Story →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="prev-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>
+        </button>
+        <div class="carousel-indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+        <button class="next-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Ready to Begin Your Defence Journey?</h2>
+          <p>Join thousands of successful candidates who have mastered their exams with DefenceCracker.</p>
+          <div class="cta-stats">
+            <div class="stat">
+              <span class="stat-number">15,000+</span>
+              <span class="stat-label">Successful Students</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5,000+</span>
+              <span class="stat-label">Study Resources</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Satisfaction Rate</span>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <button class="primary-cta">Sign Up Now</button>
+            <button class="secondary-cta">Explore Resources</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
@@ -470,26 +723,6 @@
         </div>
     </footer>
 
-    <script>
-        // Simple tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('#all-tab, #cds-tab, #capf-tab');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('tab-active'));
-                    
-                    // Add active class to clicked tab
-                    this.classList.add('tab-active');
-                    
-                    // Here you would normally filter content based on the selected tab
-                    // For this demo, we're just changing the tab appearance
-                });
-            });
-            
-            // Mobile menu toggle functionality could be added here
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
