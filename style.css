@@ -89,8 +89,8 @@ body {
 /* CSS for the new sections */
 /* General Styles */
 :root {
---primary-color: #2563EB;
---secondary-color: #3B82F6;
+--primary-color: #3861fb;
+--secondary-color: #3e4784;
 --cds-color: #4170e8;
 --capf-color: #4A5568;
 --accent-color: #FF5722;
